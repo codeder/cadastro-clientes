@@ -1,0 +1,40 @@
+.table thead tr th, .table tbody tr td{
+	vertical-align: middle;
+}
+table tbody tr td .progress{
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+table tbody tr td .sr-only{
+	height: auto;
+	width: auto;
+	position: inherit;
+}
+.view-customer tbody tr td .progress{
+	width: 100%;
+}
+table tr .center{
+	text-align: center;
+}
+table tr .left{
+	text-align: left;
+}
+strong.bg-danger{
+	display: block;
+	padding: 20px;
+	margin-bottom: 25px;
+}
+.page-title{
+	margin-bottom: 50px;
+}
+.table-list thead tr th span{
+	padding-right: 20px;
+	cursor: pointer;
+}
+.table-list thead tr th.headerSortUp span {
+  background: url('../images/down-arrow.png') no-repeat right center;
+}
+.table-list thead tr th.headerSortDown span {
+  background: url('../images/up-arrow.png') no-repeat right center;
+}

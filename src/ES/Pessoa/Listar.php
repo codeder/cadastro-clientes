@@ -1,13 +1,14 @@
 <?php
 
 namespace ES\Pessoa;
+use ES\Connection\Conn;
 
 class Listar {
 
     private $db;
             
-    function __construct(\PDO $db) {
-        $this->db = $db;
+    function __construct(Conn $db) {
+        $this->db = $db->Connect();
     }
     
     public function Listar(){

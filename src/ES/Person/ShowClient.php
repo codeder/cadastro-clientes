@@ -11,7 +11,7 @@ class ShowClient {
     }
     
     public function ShowC(){
-        $query = "SELECT * FROM clientes WHERE id=:id";
+        $query = "SELECT * FROM clients WHERE id=:id";
         $stmt = $this->db->prepare($query);
         $stmt->bindValue("id", $_GET['id'], \PDO::PARAM_INT);
         $stmt->execute();                

@@ -4,13 +4,6 @@ namespace ES\Connection;
 
 class Conn {
 
-    public static $host = "localhost";
-    public static $db = "codeeducation_cadastro";
-    public static $user = "root";
-    public static $pass = "storm1906";
-    public static $drive = "mysql";
-    
-
     public function Connect() {
 
         try {

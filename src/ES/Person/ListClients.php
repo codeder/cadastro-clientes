@@ -12,7 +12,7 @@ class ListClients {
     }
     
     public function ListC(){
-        $query = "SELECT * FROM clientes";
+        $query = "SELECT * FROM clients";
         $stmt = $this->db->prepare($query);
         $stmt->execute();                
         return $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);                        

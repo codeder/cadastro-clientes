@@ -11,7 +11,7 @@ $loader->register();
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Exercício2 - PHPOO - Code Education</title>
+        <title>Cadastro de Clientes - PHPOO - Code Education</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -22,7 +22,7 @@ class InsertDatabase {
         try {
             
         $this->db->beginTransaction();        
-        $query = "INSERT INTO clientes VALUES(NULL, :type,:image,:name,:cpf,:cnpj,:razao_social,"
+        $query = "INSERT INTO clients VALUES(NULL, :type,:image,:name,:cpf,:cnpj,:razao_social,"
                 . ":address,:number,:city,:uf,"
                 . ":billing_address,:billing_number,:billing_city,:billing_uf,"
                 . ":percent)";
@@ -55,7 +55,7 @@ class InsertDatabase {
     
     public function Flush(){
         $this->db->commit();
-        echo "Dados inseridos com sucesso<br>";          
+        echo "Cliente inserido com sucesso<br>";          
     }
         
 }

@@ -1,5 +1,5 @@
 <?php
-require_once("./fixture/db.php");
+require_once("../fixture/db.php");
 DEFINE("SRC", "../src/ES/");
 
 /* Autoloader */

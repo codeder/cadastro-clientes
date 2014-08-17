@@ -5,7 +5,7 @@
 Terceiro exercício de Orientação a objetos com PHP
 
 ##O que foi feito?
-1.  Criação de Interface para cadastro de endereços e percentual;
+1.  Criação de Interface para cadastro de endereços e Percent;
 2.  Getters e Setters;
 3.  Modificadores de acesso;
 4.  Namespaces;

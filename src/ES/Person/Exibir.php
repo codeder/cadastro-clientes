@@ -2,8 +2,7 @@
 
 namespace ES\Pessoa;
 use ES\Connection\Conn;
-
-class Listar {
+class Exibir {
 
     private $db;
             
@@ -11,9 +10,10 @@ class Listar {
         $this->db = $db->Connect();
     }
     
-    public function Listar(){
-        $query = "SELECT * FROM clientes";
+    public function Exibe(){
+        $query = "SELECT * FROM Clients WHERE id=:id";
         $stmt = $this->db->prepare($query);
+        $stmt->bindValue("id", $_GET['id'], \PDO::PARAM_INT);
         $stmt->execute();                
         return $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);                        
     }

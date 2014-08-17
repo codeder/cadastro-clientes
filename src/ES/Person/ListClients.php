@@ -1,9 +1,9 @@
 <?php
 
-namespace ES\Pessoa;
+namespace ES\Person;
 use ES\Connection\Conn;
 
-class Listar {
+class ListClients {
 
     private $db;
             
@@ -11,8 +11,8 @@ class Listar {
         $this->db = $db->Connect();
     }
     
-    public function Listar(){
-        $query = "SELECT * FROM Clients";
+    public function ListC(){
+        $query = "SELECT * FROM clientes";
         $stmt = $this->db->prepare($query);
         $stmt->execute();                
         return $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);                        

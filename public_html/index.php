@@ -35,32 +35,32 @@ $loader->register();
 
 
             <div class="page-title">
-                <h1>Clients - Andamento dos projetos</h1>
+                <h1>Clientes - Andamento dos projetos</h1>
             </div>
 
             <?php
 
             use ES\Connection\Conn;
-            use ES\Person\Listar;
-            use ES\Person\Exibir;
+            use ES\Person\ListClients;
+            use ES\Person\ShowClient;
 
             $conn = new Conn;
-            $ListarClients = new Listar($conn);
-            $ExibirClient = new Exibir($conn);
+            $list = new ListClients($conn);
+            $show = new ShowClient($conn);
             ?>
 
             <?php
                 if (!isset($_GET['id'])) :
-                    require_once 'inc/listar.php';
+                    require_once 'inc/List.php';
             ?>
 
             <?php elseif($_GET['id']):
                 $id = $_GET['id'];
-                require_once 'inc/exibir.php';
+                require_once 'inc/Show.php';
             ?>
 
             <?php else: ?>            
-                <strong class="bg-danger">Nenhum Client foi encontrado</strong>    
+                <strong class="bg-danger">Nenhum cliente foi encontrado</strong>    
                 <a href="javascript: history.go(-1)" class="btn btn-default btn-lg">Voltar</a>
             <?php endif; ?>
 

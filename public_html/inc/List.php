@@ -12,33 +12,33 @@
             <tbody>
 
                 <?php
-                foreach ($ListarClients->Listar() as $Client) {
+                foreach ($list->ListC() as $client) {
 
-                    if($Client['percent']<=30){
+                    if($client['percent']<=30){
                         $class = "progress-bar-danger";
-                    }elseif(($Client['percent']>=31) AND ($Client['percent']<=60)){
+                    }elseif(($client['percent']>=31) AND ($client['percent']<=60)){
                         $class = "progress-bar-warning";
                     }else{
                         $class = "progress-bar-success";
                     }
 
                     echo "<tr>";
-                    echo '<td class="center">' . $Client['id'] . '</td>';
-                    echo "<td><img src=\"" . $Client['Image'] . "\"/></td>";                    
-                    if ($Client['type'] == "Fisica"):
-                        echo "<td>" . $Client['name'] . "</td>";
+                    echo '<td class="center">' . $client['id'] . '</td>';
+                    echo "<td><img src=\"" . $client['image'] . "\"/></td>";                    
+                    if ($client['type'] == "Fisica"):
+                        echo "<td>" . $client['name'] . "</td>";
                     else:
-                        echo "<td>" . $Client['razao_social'] . "</td>";
+                        echo "<td>" . $client['razao_social'] . "</td>";
                     endif;
-                    echo '<td class="left">' . $Client['type'] . '</td>';
+                    echo '<td class="left">' . $client['type'] . '</td>';
                     echo '<td class="center">';
                     echo '<div class="progress">';
-                    echo '<div class="progress-bar '.$class.' progress-bar-striped" role="progressbar" aria-valuenow="'.$Client['percent'].'" aria-valuemin="0" aria-valuemax="100" style="width: '.$Client['percent'].'%">'; 
-                    echo '<span class="sr-only">'.$Client['percent'].'%</span>';
+                    echo '<div class="progress-bar '.$class.' progress-bar-striped" role="progressbar" aria-valuenow="'.$client['percent'].'" aria-valuemin="0" aria-valuemax="100" style="width: '.$client['percent'].'%">'; 
+                    echo '<span class="sr-only">'.$client['percent'].'%</span>';
                     echo "</div>";
                     echo "</div>";
                     echo "</td>";
-                    echo '<td class="center"><a class="btn btn-default" href="?id=' . $Client['id'] . '">Visualizar</a></td>';
+                    echo '<td class="center"><a class="btn btn-default" href="?id=' . $client['id'] . '">Visualizar</a></td>';
                     echo "</tr>";
                 }
                 ?>

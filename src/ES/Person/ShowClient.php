@@ -1,8 +1,8 @@
 <?php
 
-namespace ES\Pessoa;
+namespace ES\Person;
 use ES\Connection\Conn;
-class Exibir {
+class ShowClient {
 
     private $db;
             
@@ -10,8 +10,8 @@ class Exibir {
         $this->db = $db->Connect();
     }
     
-    public function Exibe(){
-        $query = "SELECT * FROM Clients WHERE id=:id";
+    public function ShowC(){
+        $query = "SELECT * FROM clientes WHERE id=:id";
         $stmt = $this->db->prepare($query);
         $stmt->bindValue("id", $_GET['id'], \PDO::PARAM_INT);
         $stmt->execute();                

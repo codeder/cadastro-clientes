@@ -55,7 +55,7 @@ class InsertDatabase {
     
     public function Flush(){
         $this->db->commit();
-        echo "Dados inseridos com sucesso";          
+        echo "Dados inseridos com sucesso<br>";          
     }
         
 }

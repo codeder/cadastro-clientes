@@ -48,8 +48,8 @@ class Juridica extends Address  implements iClient {
         $this->type = $type;
     }
 
-    public function setImage($Image) {
-        $this->Image = $Image;
+    public function setImage($image) {
+        $this->image = $image;
     }
         
     public function setRazaoSocial($razaoSocial) {

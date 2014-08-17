@@ -8,7 +8,7 @@ class Fisica extends Address implements iClient {
 
     private $id;
     private $Type;
-    private $Image;
+    private $image;
     private $nome;
     private $cpf;
     private $percent;
@@ -30,7 +30,7 @@ class Fisica extends Address implements iClient {
     }
 
     public function getImage() {
-        return $this->Image;
+        return $this->image;
     }
         
     public function getNome() {
@@ -49,8 +49,8 @@ class Fisica extends Address implements iClient {
         $this->Type = $Type;
     }
 
-    public function setImage($Image) {
-        $this->Image = $Image;
+    public function setImage($image) {
+        $this->image = $image;
     }
         
     public function setNome($nome) {

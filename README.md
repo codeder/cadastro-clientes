@@ -15,7 +15,7 @@ Cadastro de Clientes com PHPOO e PDO.
 7.  PDO e persistencia de dados;
 
 ##Instruções
-1. Mudar os dados de conexao acessando: public_html/fixture/db.php;
+1. Mudar os dados de conexao das constantes acessando: public_html/fixture/db.php;
 2. Para rodar o projeto no Built in server digite: "php -S 0.0.0.0:8000 -t public_html";
 3. Em seguida, rode o comando: php 0.0.0.0:8000/fixture. Isso vai instalar a tabela "clients" e vai perssistir os dados de exemplo nela;
 4. Depois é só acessar o projeto no browser usando: http://0.0.0.0:8000.

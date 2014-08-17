@@ -1,4 +1,5 @@
 <?php
+require_once("./fixture/db.php");
 DEFINE("SRC", "../src/ES/");
 
 /* Autoloader */
@@ -54,14 +55,11 @@ $loader->register();
                     require_once 'inc/List.php';
             ?>
 
-            <?php elseif($_GET['id']):
+            <?php else:
                 $id = $_GET['id'];
                 require_once 'inc/Show.php';
-            ?>
-
-            <?php else: ?>            
-                <strong class="bg-danger">Nenhum cliente foi encontrado</strong>    
-                <a href="javascript: history.go(-1)" class="btn btn-default btn-lg">Voltar</a>
+            ?>        
+                
             <?php endif; ?>
 
 

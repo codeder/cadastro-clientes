@@ -2,6 +2,7 @@
 
 namespace ES\Person;
 use ES\Connection\Conn;
+
 class ShowClient {
 
     private $db;
@@ -15,7 +16,12 @@ class ShowClient {
         $stmt = $this->db->prepare($query);
         $stmt->bindValue("id", $_GET['id'], \PDO::PARAM_INT);
         $stmt->execute();                
-        return $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);                        
+        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        if($result){
+            return $result;
+        }else{
+            return false;
+        }
     }
 
     

@@ -16,7 +16,7 @@ use ES\Person\Type\Juridica;
 use ES\Person\Addresss\Address;
 
 try {
-    $t = new \PDO("mysql:host=" . HOST, USER, PASS);
+    $t = new \PDO("mysql:host=" .HOST, USER, PASS);
     $t->exec("
 
 CREATE DATABASE  IF NOT EXISTS `codeeducation_cadastro` /*!40100 DEFAULT CHARACTER SET utf8 */;
@@ -42,7 +42,7 @@ CREATE TABLE `clients` (
   `billing_uf` varchar(2) DEFAULT NULL,
   `percent` int(3) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 ") or die(print_r($conn->errorInfo(), true));
 } catch (\PDOException $e) {
     die("Erro: " . $e->getMessage());
